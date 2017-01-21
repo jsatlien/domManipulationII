@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body ng-app="app">
     <h1>Calculator</h1>
 
     <form>
@@ -21,9 +21,9 @@
     </div>
     <h2>Hard Calculator</h2>
     <!-- 280 x 350 -->
-    <div class="calculator-body">
+    <div class="calculator-body" ng-controller="CalculatorController as calculate">
       <button class="button" id="clear">C</button>
-      <input id="input-answer"></input>
+      <input id="input-answer">{{calculate.currentInput}}</input>
       <button class="button" id="7">7</button>
       <button class="button" id="8">8</button>
       <button class="button" id="9">9</button>
